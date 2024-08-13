@@ -29,10 +29,11 @@ services:
 
   todo-database:
     image: mongo:6
-    #volumes: 
-    #  - database:/data/db
+    # If we want to add volume to container then uncomment line 33 and 34 and 39 if u dont want to add then comment this  comments all volums
+    volumes: 
+      - database:/data/db
     ports:
       - 27017:27017
 
-#volumes:
-  #database:
+volumes:
+  database:
